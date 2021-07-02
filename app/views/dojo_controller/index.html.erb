@@ -1,5 +1,4 @@
 <h1>Listing <%= @dojo_controller.count %> Dojos</h1>
-
 <table>
     <thead>
         <tr>
@@ -25,7 +24,15 @@
             <td>
                 <%= dojo.state %>
             </td>
-        </tr>
-        <% end %>
-    </tbody>
+            <td>
+            <a href="/dojos/<%= dojo.id %>">Show</a> | 
+            <a href="/dojos/<%= dojo.id %>/edit">Edit</a> | 
+            <a href="/dojos/<%= dojo.id %>" data-method="delete">Destroy</a>
+        </td>
+    </tr>
+    <% end %>
+</tbody>
 </table>
+
+<a href="/dojos/new">New Dojo</a>
+        
